@@ -1,12 +1,12 @@
-Leaflet.StyleEditor
+lopegochamp
 =============
-[![Build Status](https://travis-ci.org/dwilhelm89/Leaflet.StyleEditor.svg?branch=master)](https://travis-ci.org/dwilhelm89/Leaflet.StyleEditor)
+[![Build Status](https://travis-ci.org/dwilhelm89/lopegochamp.svg?branch=master)](https://travis-ci.org/dwilhelm89/lopegochamp)
 
 The [Leaflet](https://leafletjs.com/) StyleEditor allows to edit the style of any feature drawn within Leaflet.
 After activating the tool, the features can be edited by simply clicking them within the map.
 
-Check out the [Demo](https://dwilhelm89.github.io/Leaflet.StyleEditor/)!
-And another [demo](https://dwilhelm89.github.io/Leaflet.StyleEditor/StyleEditorWithLeafletDraw.html) with [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw).
+Check out the [Demo](https://dwilhelm89.github.io/lopegochamp/)!
+And another [demo](https://dwilhelm89.github.io/lopegochamp/StyleEditorWithLeafletDraw.html) with [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw).
 
 Usage
 -----
@@ -24,7 +24,7 @@ marker.addTo(map)
 styleEditor.enable(marker)
 ```
 
-### Settings
+# lopegochamp
 
 There are a bunch of settings you can define when initializing the styleeditor.
 
@@ -69,11 +69,11 @@ Here is a list of all possible options.
   example: *'#2c3e50'*
 
 * **openOnLeafletDraw**  
-  Define if Leaflet.StyleEditor should automatically show up if an element has been created with
+  Define if lopegochamp should automatically show up if an element has been created with
   [Leaflet Draw](https://github.com/Leaflet/Leaflet.draw)
 
 * **openOnLeafletEditable**  
-  Define if Leaflet.StyleEditor should automatically show up if an element has been created with
+  Define if lopegochamp should automatically show up if an element has been created with
   [Leaflet Editable](https://github.com/Leaflet/Leaflet.Editable)
 
 * **showTooltip**  
@@ -104,7 +104,7 @@ Here is a list of all possible options.
   example: *{'marker': {'size': {'boolean': () => {return true }, 'formElement': 'L.StyleEditor.formElement.DashElement' }}}*
 
   Only predefined styleOptions of the Geometry- and Markerform are supported.
-  For every styleOption You may provide a boolean, function, [FormElement](https://github.com/dwilhelm89/Leaflet.StyleEditor/blob/master/src/javascript/FormElements/FormElement.js) or dictionary.
+  For every styleOption You may provide a boolean, function, [FormElement](https://github.com/dwilhelm89/lopegochamp/blob/master/src/javascript/FormElements/FormElement.js) or dictionary.
  
   If you decide to customize forms **only** the formElements listed will be rendered (and shown).
  
@@ -140,14 +140,14 @@ map.on('styleeditor:changed', function(element){
 
 # Packages
 ## Bower
-Leaflet.StyleEditor is also a registered package in [Bower](https://bower.io/) (based on [nodejs](https://nodejs.org/)). Integrate the source in your project with:
+lopegochamp is also a registered package in [Bower](https://bower.io/) (based on [nodejs](https://nodejs.org/)). Integrate the source in your project with:
 ```
 npm install -g bower
-bower install Leaflet.StyleEditor
+bower install lopegochamp
 ```
 
 ## npm
-Leaflet.StyleEditor is also a registered [node module](https://www.npmjs.com/package/leaflet-styleeditor)
+lopegochamp is also a registered [node module](https://www.npmjs.com/package/leaflet-styleeditor)
 ```
 npm install leaflet-styleeditor
 ```
@@ -165,7 +165,7 @@ Development
 
 ### Marker
 
-All Marker need to extend [L.StyleEditor.marker.Marker](https://github.com/dwilhelm89/Leaflet.StyleEditor/blob/master/src/javascript/Marker/Marker.js).
+All Marker need to extend [L.StyleEditor.marker.Marker](https://github.com/dwilhelm89/lopegochamp/blob/master/src/javascript/Marker/Marker.js).
 
 At a minimum a new Marker implementation **needs to provide these functions**:
 * createMarkerIcon(iconOptions)
@@ -191,16 +191,16 @@ The **markerForm** can be individually set.
 
 The StyleForm consists of different Forms, which consist of different FormElements.
 
-Forms need to extend [L.StyleEditor.forms.Form](https://github.com/dwilhelm89/Leaflet.StyleEditor/blob/master/src/javascript/Form/Form.js),
-every FormElement [L.StyleEditor.formElements.FormElement](https://github.com/dwilhelm89/Leaflet.StyleEditor/blob/master/src/javascript/FormElements/FormElement.js).
+Forms need to extend [L.StyleEditor.forms.Form](https://github.com/dwilhelm89/lopegochamp/blob/master/src/javascript/Form/Form.js),
+every FormElement [L.StyleEditor.formElements.FormElement](https://github.com/dwilhelm89/lopegochamp/blob/master/src/javascript/FormElements/FormElement.js).
 
 Forms consist of FormElements defined in options.formElements as a dictionary mapping the "styleOption" (e.g. icon, color, dash,...) to the FormElement.
 A FormElement needs to implement **createContent**, where the select options are created.
 
 **style** and **lostFocus** may be useful as well.
 
-For a simple FormElement see [DashElement](https://github.com/dwilhelm89/Leaflet.StyleEditor/blob/master/src/javascript/FormElements/DashElement.js),
-for a more complicated one see [IconElement](https://github.com/dwilhelm89/Leaflet.StyleEditor/blob/master/src/javascript/FormElements/IconElement.js)
+For a simple FormElement see [DashElement](https://github.com/dwilhelm89/lopegochamp/blob/master/src/javascript/FormElements/DashElement.js),
+for a more complicated one see [IconElement](https://github.com/dwilhelm89/lopegochamp/blob/master/src/javascript/FormElements/IconElement.js)
 
 Authors
 -----
